@@ -1,0 +1,41 @@
+app:
+  # String example
+  name: "MyApplication"
+  
+  # Integer example
+  port: 8080
+  
+  # Unsigned integer example
+  max_connections: 1000
+  
+  # Boolean example
+  debug_mode: true
+  
+  # Duration examples (Go duration format)
+  timeout: "30s"
+  refresh_interval: "5m"
+  
+  # String slice (array) example
+  allowed_origins:
+    - "http://localhost:3000"
+    - "https://example.com"
+    - "https://api.example.com"
+  
+  # String map (dictionary) example
+  database:
+    host: "localhost"
+    port: "5432"
+    name: "mydb"
+    user: "admin"
+    
+  # Nested configuration example
+  logging:
+    level: "info"
+    format: "json"
+    output: "stdout"
+    
+  # Additional examples
+  retry:
+    attempts: 3
+    delay: "1s"
+    max_delay: "5s" 

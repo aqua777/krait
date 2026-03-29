@@ -1,0 +1,11 @@
+int: 987
+bool: false
+float64: 987.654
+duration: 15s
+slice:
+- value-from-config-1
+- value-from-config-2
+map:
+  key-from-config-1: value-from-config-1
+  key-from-config-2: value-from-config-2
+string: value-from-config

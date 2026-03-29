@@ -1,0 +1,8 @@
+host: file-host
+port: 3000
+app:
+  name: from-yaml
+database:
+  host: pg.internal
+  port: 5432
+  sslmode: require
