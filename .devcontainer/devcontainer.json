@@ -1,0 +1,41 @@
+{
+    "name": "Krait/v0",
+    "build": {
+        "dockerfile": "../.docker/Go.dockerfile",
+        "context": "..",
+        "args": {
+            "GO_USER_NAME": "go-user"
+        }
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/ws,type=bind,consistency=cached",
+    "workspaceFolder": "/ws",
+    "remoteUser": "go-user",
+    "updateRemoteUserUID": true,
+    // "overrideCommand": false,
+    "mounts": [
+    ],
+    "extensions": [
+        "golang.go",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.makefile-tools"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        }
+    },
+    "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 100
+    },
+    "forwardPorts": [
+        8080,
+        5173,
+        11434
+    ],
+    "containerEnv": {
+        "OLLAMA_HOST": "host.docker.internal:11434"
+    }
+}

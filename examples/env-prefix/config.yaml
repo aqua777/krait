@@ -1,0 +1,21 @@
+# Sample for examples/env-prefix: host/port illustrate prefix binding; types subcommand reads all keys below.
+
+host: config-default.example.com
+port: 3000
+
+ids:
+  - 10
+  - 20
+  - 30
+
+created_at: "2024-06-01T12:00:00Z"
+
+max_size: 5mb
+
+headers:
+  accept:
+    - application/json
+    - text/html
+  x-trace:
+    - span-a
+    - span-b
